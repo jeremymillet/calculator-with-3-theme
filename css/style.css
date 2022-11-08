@@ -1,0 +1,353 @@
+:root {
+    /* COLOR VARIABLE UTILE ***************************************************/
+    --bg-main: hsl(222, 26%, 31%);
+    --bg-screen: hsl(224, 36%, 15%);
+    --bg-numpad: hsl(223, 31%, 20%);
+    --bg-reset: hsl(225, 21%, 49%);
+    --bg-button: hsl(30, 25%, 89%);
+    --bg-egal: hsl(6, 63%, 50%);
+    /* COLOR VARIABLE stock ***************************************************/
+    --bg-main-theme1: hsl(222, 26%, 31%);
+    --bg-screen-theme1: hsl(224, 36%, 15%);
+    --bg-numpad-theme1: hsl(223, 31%, 20%);
+    --bg-reset-theme1: hsl(225, 21%, 49%);
+    --bg-button-theme1: hsl(30, 25%, 89%);
+    --bg-egal-theme1: hsl(6, 63%, 50%);
+
+    --bg-main-theme2: hsl(0, 0%, 90%);
+    --bg-screen-theme2: hsl(0, 0%, 93%);
+    --bg-numpad-theme2: hsl(0, 5%, 81%);
+    --bg-reset-theme2: hsl(185, 42%, 37%);
+    --bg-button-theme2: hsl(45, 7%, 89%);
+    --bg-egal-theme2: hsl(25, 98%, 40%);
+
+    --bg-main-theme3: hsl(268, 75%, 9%);
+    --bg-screen-theme3: hsl(268, 71%, 12%);
+    --bg-numpad-theme3: hsl(268, 71%, 12%);
+    --bg-reset-theme3: hsl(281, 89%, 26%);
+    --bg-button-theme3: hsl(268, 47%, 21%);
+    --bg-egal-theme3: hsl(176, 100%, 44%);
+    /* TEXTE COLOR VARIABLE UTILE ***************************************************/
+    --text-color-button: hsl(221, 14%, 31%);
+    --text-color-texte: hsl(0, 0%, 100%);
+    ;
+    --text-color-egal: hsl(0, 0%, 100%);
+    --text-color-reset: hsl(0, 0%, 100%);
+    /* TEXTE COLOR VARIABLE stock ***************************************************/
+    --text-color-button-theme1: hsl(221, 14%, 31%);
+    --text-color-texte-theme1: hsl(0, 0%, 100%);
+    --text-color-egal-theme1: hsl(0, 0%, 100%);
+    --text-color-reset-theme1: hsl(0, 0%, 100%);
+    --text-color-button-theme2: hsl(60, 10%, 19%);
+    --text-color-texte-theme2: hsl(60, 10%, 19%);
+    ;
+    --text-color-egal-theme2: hsl(0, 0%, 100%);
+    --text-color-reset-theme2: hsl(0, 0%, 100%);
+    --text-color-button-theme3: hsl(52, 100%, 62%);
+    --text-color-texte-theme3: hsl(52, 100%, 62%);
+    --text-color-egal-theme3: hsl(198, 20%, 13%);
+    --text-color-reset-theme3: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text-color-texte);
+    max-width: 1440px;
+}
+
+.calculatrice {
+    height: 700px;
+    width: 600px;
+    max-width: 800px;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.texte-header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.theme {
+    display: flex;
+    width: 180px;
+    margin-top: 10px;
+}
+
+.button-container button {
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.button-container p {
+    font-size: 20px;
+    height: 10px;
+    padding-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 2px;
+    z-index: 2;
+}
+
+.button .toggle {
+    position: relative;
+    top: 25px;
+    right: 80px;
+    width: 75px;
+    height: 20px;
+    background-color: var(--bg-screen-theme1);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.button .toggle-button {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-egal-theme1);
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button .theme1 {
+    background-color: var(--bg-screen-theme1);
+}
+
+.button .theme2 {
+    background-color: var(--bg-screen-theme2);
+}
+
+.button .theme3 {
+    background-color: var(--bg-screen-theme3);
+}
+
+.button .toggle.theme1 .toggle-button {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-egal-theme1);
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button .toggle.theme2 .toggle-button {
+    position: relative;
+    left: 28px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-egal-theme2);
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle.theme3 .toggle-button {
+    position: relative;
+    left: 55px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-egal-theme3);
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.texte {
+    display: flex;
+    height: 58px;
+    align-items: flex-end;
+}
+
+.button {
+    display: flex;
+    align-items: flex-start;
+}
+
+.button>div:first-child {
+    display: flex;
+}
+
+.screen {
+    height: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--bg-screen);
+    border-radius: 10px;
+}
+
+.chiffre-container {
+    background-color: var(--bg-numpad);
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.chiffre {
+    height: 470px;
+}
+
+.chiffre>div {
+    display: flex;
+    justify-content: center;
+}
+
+.petit-button {
+    width: 110px;
+    background-color: var(--bg-button);
+    border-radius: 10px;
+    border: none;
+    height: 70px;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text-color-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gros-button {
+    width: 280px;
+    border-radius: 10px;
+    border: none;
+    height: 70px;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text-color-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete {
+    background-color: var(--bg-reset);
+    color: var(--text-color-reset);
+    font-variant: var(--bg-reset);
+}
+
+.reset {
+    background-color: var(--bg-reset);
+    color: var(--text-color-reset)
+}
+
+.egal {
+    background-color: var(--bg-egal);
+    color: var(--text-color-egal)
+}
+
+@media (max-width:767px) {
+    body {
+        background-color: var(--bg-main);
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--text-color-texte);
+        max-width: 1440px;
+    }
+
+    .calculatrice {
+        height: 500px;
+        width: 350px;
+        max-width: 500px;
+    }
+
+    .petit-button {
+        width: 100%;
+        background-color: var(--bg-button);
+        border-radius: 10px;
+        border: none;
+        height: 70px;
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--text-color-button);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gros-button {
+        width: 200%;
+        border-radius: 10px;
+        border: none;
+        height: 70px;
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--text-color-button);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chiffre>div {
+        display: flex;
+        justify-content: center;
+        width: 25%;
+        max-width: 50%;
+    }
+
+    .chiffre>.col-md-6 {
+        width: 50%;
+    }
+
+    .delete {
+        background-color: var(--bg-reset);
+        color: var(--text-color-reset);
+        font-variant: var(--bg-reset);
+    }
+
+    .reset {
+        background-color: var(--bg-reset);
+        color: var(--text-color-reset)
+    }
+
+    .egal {
+        background-color: var(--bg-egal);
+        color: var(--text-color-egal)
+    }
+
+    .texte {
+        display: flex;
+        height: 55px;
+        align-items: flex-end;
+    }
+
+    .theme {
+        display: flex;
+        width: 160px;
+        margin-top: 10px;
+    }
+
+    .texte-header {
+        display: flex;
+        align-items: flex-end;
+        height: 79px;
+    }
+}
+
+@media (min-width:1440px) {
+    body {
+        display: flex;
+        justify-content: center;
+        max-width: none;
+
+    }
+
+}

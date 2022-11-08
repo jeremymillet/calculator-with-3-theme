@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+  <div class="container calculatrice">
+    <div class="container header">
+      <div class="texte-header">
+        <p>calc</p>
+      </div>
+      <div class="theme">
+        <p class="container texte">theme</p>
+        <div class="button">
+          <div class="button-container">
+            <p>1</p>
+            <button id="theme1" onclick="animationtoggle1(), removetoggle2(),removetoggle3()"></button>
+          </div>
+          <div class="button-container">
+            <p>2</p>
+            <button id="theme2" onclick="animationtoggle2(), removetoggle1(), removetoggle3()"></button>
+          </div>
+          <div class="button-container">
+            <p>3</p>
+            <button id="theme3" onclick="animationtoggle3(), removetoggle1(), removetoggle2()"></button>
+          </div>
+          <div class="toggle">
+            <div class="toggle-button">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container screen">
+
+    </div>
+    <div class="container chiffre-container">
+      <div class="chiffre row">
+        <div class="col-md-3">
+          <button data-key="103" class="petit-button bouton">7</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="104" class="petit-button bouton">8</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="105" class="petit-button bouton">9</button>
+        </div>
+        <div class="col-md-3 ">
+          <button data-key="8" class="petit-button bouton delete ">DEL</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="100" class="petit-button bouton">4</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="101" class="petit-button bouton">5</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="102" class="petit-button bouton">6</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="107" class="petit-button bouton">+</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="97" class="petit-button bouton">1</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="98" class="petit-button bouton">2</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="99" class="petit-button bouton ">3</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="109" class="petit-button bouton ">-</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="110" class="petit-button bouton ">.</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="96" class="petit-button bouton ">0</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="111" class="petit-button bouton ">/</button>
+        </div>
+        <div class="col-md-3">
+          <button data-key="106" class="petit-button bouton ">*</button>
+        </div>
+        <div class="col-md-6">
+          <button data-key="46" class="gros-button  bouton reset">RESET</button>
+        </div>
+        <div class="col-md-6">
+          <button data-key="13" class="gros-button  bouton egal">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

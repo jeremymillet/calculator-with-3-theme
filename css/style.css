@@ -138,12 +138,15 @@ body {
 }
 
 .button .toggle.theme1 .toggle-button {
+    position: relative;
+    left: 0px;
     width: 20px;
     height: 20px;
     background-color: var(--bg-egal-theme1);
     border-radius: 50%;
     align-items: center;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .button .toggle.theme2 .toggle-button {
@@ -155,6 +158,7 @@ body {
     border-radius: 50%;
     align-items: center;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .toggle.theme3 .toggle-button {
@@ -166,6 +170,7 @@ body {
     border-radius: 50%;
     align-items: center;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .texte {

@@ -1,32 +1,45 @@
 const touches = [...document.querySelectorAll('.bouton')];
 const listkeycode = touches.map(touche => touche.dataset.key);
-const ecran = document.querySelector('.screen')
+const ecran = document.querySelector('.screen') // ID
 
-document.addEventListener('keydown', (e) => {
-    const valeur = e.keyCode.toString();
-    calculer(valeur)
+// const KEY_ENTER = 46
+
+
+document.addEventListener('keydown', e => {
+    calculer(e.keyCode.toString())
 });
 
 document.addEventListener('click', (e) => {
-    const valeur = e.target.dataset.key;
-    calculer(valeur)
+    calculer(e.target.dataset.key)
+    
 })
 
-
-const calculer = (valeur) => {
+/**
+ * 
+ */
+const calculer = valeur => {
     if (listkeycode.includes(valeur)) {
         switch (valeur) {
+            // DEL
+            case '8':
+                // récupérer la valeur actuelle du screen
+                // utiliser la méthode slice pour supprimer le dernier caractère
+                // réassigne à screen la nouvelle valeur
+                ecran.textContent = ecran.textContent.slice(0, -1)
+                break;
             case '46':
                 ecran.textContent = "";
+                break;
+
             case '13':
                 const calcul = eval(ecran.textContent);
                 ecran.textContent = calcul
                 break
+
             default:
                 const indexkeycode = listkeycode.indexOf(valeur);
                 const touche = touches[indexkeycode];
                 ecran.textContent += touche.innerHTML
-                console.log(valeur)
         }
     }
 }
@@ -42,21 +55,15 @@ let themeButton3 = document.getElementById("theme3")
 let theme = "theme1";
 
 themeButton1.addEventListener('click', () => {
-    if (theme = "theme2" && "theme3") {
-        theme = "theme1";
-    }
+    theme = "theme1";
     toggletheme(theme);
 });
 themeButton2.addEventListener('click', () => {
-    if (theme = "theme1" && "theme3") {
-        theme = "theme2";
-    }
+    theme = "theme2";
     toggletheme(theme);
 });
 themeButton3.addEventListener('click', () => {
-    if (theme = "theme1" && "theme2") {
-        theme = "theme3";
-    }
+    theme = "theme3";
     toggletheme(theme);
 });
 
@@ -172,23 +179,23 @@ const toggletheme = (theme) => {
 
 let toggle = document.querySelector(".toggle");
 
-function animationtoggle1(){
+function animationtoggle1() {
     toggle.classList.add("theme1")
 }
-function animationtoggle2(){
+function animationtoggle2() {
     toggle.classList.add("theme2")
 }
-function animationtoggle3(){
+function animationtoggle3() {
     toggle.classList.add("theme3")
 }
 
-function removetoggle1(){
+function removetoggle1() {
     toggle.classList.remove("theme1")
 }
-function removetoggle2(){
+function removetoggle2() {
     toggle.classList.remove("theme2")
 }
-function removetoggle3(){
+function removetoggle3() {
     toggle.classList.remove("theme3")
 }
 
